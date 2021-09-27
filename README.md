@@ -1,12 +1,12 @@
 # twitter_top_trending
 
-Este projeto tem como objetivo coletar e analisar o top trending do twitter e fazer análise de sentimento em tweets relacionados aos top trending.
+<p align="center"> Este projeto tem como objetivo coletar e analisar o top trending do twitter e fazer análise de sentimento em tweets relacionados aos top trending. </p>
 
 
 
 ![](https://github.com/mateusreisuf/twitter_top_trending/blob/0023a3333a60b4eb465dcecd577a27e083f70e90/movie.gif)
 
-Requerimentos:
+<h3> Requerimentos: <h3>
 
 python = 3.8
 
@@ -22,7 +22,7 @@ numpy
 
 nltk
 
-
+<h3> Como usar: <h3>
 
 Para coletar os top trending e gerar um gif como da figura acima é preciso seguir esses passos:
 
