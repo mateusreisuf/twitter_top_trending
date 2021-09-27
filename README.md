@@ -7,64 +7,64 @@
 ![](https://github.com/mateusreisuf/twitter_top_trending/blob/0023a3333a60b4eb465dcecd577a27e083f70e90/movie.gif)
 
 <h3> Requerimentos: <h3>
+<p>python = 3.8<p>
 
-python = 3.8
+<p>tweepy<p>
 
-tweepy
+<p>googletrans==4.0.0rc1<p>
 
-googletrans==4.0.0rc1
+<p>pymongo<p>
 
-pymongo
+<p>pandas<p>
 
-pandas
+<p>numpy<p>
 
-numpy
-
-nltk
+<p>nltk<p>
 
 <h3> Como usar: <h3>
+<p>Para coletar os top trending e gerar um gif como da figura acima é preciso seguir esses passos:<p>
 
-Para coletar os top trending e gerar um gif como da figura acima é preciso seguir esses passos:
+<p>executar o comando abaixo para coletar os top trending: <p>
 
-executar o comando abaixo para coletar os top trending: 
+<h5>python top_trending.py<h5>
 
-python top_trending.py
+<p>depois interromper a execução quando achar que possui dados suficientes.<p>
 
-depois interromper a execução quando achar que possui dados suficientes.
+<p>executar o comando abaixo para salvar os dados do mongo em um arquivo:<p>
 
-executar o comando abaixo para salvar os dados do mongo em um arquivo:
+<h5>python trending_volume_mongo.py<h5>
 
-python trending_volume_mongo.py
+<p>executar o seguinte comando para gerar os gráficos:<p>
 
-executar o seguinte comando para gerar os gráficos:
+<h5>python graficos.py<h5>
 
-python graficos.py
+<p>e por fim executar o comando abaixo para gerar um gif:<p>
 
-e por fim executar o comando abaixo para gerar um gif:
-
-python make_gif.py
-
+<h5>python make_gif.py<h5>
 
 
-Para fazer analise de sentimentos é preciso seguir os seguintes passos:
 
-executar o comando:
+<p>Para fazer analise de sentimentos é preciso seguir os seguintes passos:<p>
 
-python top_trending_tweets.py 
+<p>executar o comando:<p>
 
-para coletar tweets relacionados aos top trendings e salvar no mongoDB.
+<h5>python top_trending_tweets.py <h5>
 
-Executar  o comando abaixo para salvar os dados do mongo em um arquivo:
+<p>para coletar tweets relacionados aos top trendings e salvar no mongoDB.<p>
 
-python tweets_mongo.py
+<p>Executar  o comando abaixo para salvar os dados do mongo em um arquivo:<p>
 
-e por fim executar o comnado abaixo para fazer analise de sentimento nos tweets:
+<h5>python tweets_mongo.py<h5>
 
-python sentiment_analysis.py
+<p>e por fim executar o comnado abaixo para fazer analise de sentimento nos tweets:<p>
 
-O resultado da analise de sentimentos é um dicionário que contem os nomes dos top trending
+<h5>python sentiment_analysis.py<h5>
 
-e uma classificação em relação ao sentimento que pode assumir 3 valores neutral , positive ou negative.
+<p>O resultado da analise de sentimentos é um dicionário que contem os nomes dos top trending e uma classificação em relação ao sentimento que pode assumir 3 valores neutral , positive ou negative.<p>
+
+  
+
+
 
 
 
