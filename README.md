@@ -18,6 +18,8 @@
 
 <p>pandas</p>
 
+<p>matplotlib</p>
+
 <p>numpy</p>
 
 <p>nltk</p>
