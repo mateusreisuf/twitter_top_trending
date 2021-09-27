@@ -19,7 +19,7 @@ from pymongo import  MongoClient
 
 
 # Conexão com Banco de dados MongoDB
-cluster = MongoClient('mongodb+srv://mat:1523a5b6M@cluster0.ihbkd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
+cluster = MongoClient('')
 db = cluster['twitter']
 collection = db['tweets']
 
@@ -48,10 +48,10 @@ class MyStreamListener(tweepy.StreamListener):
 
 
 # Autenticações com API do Twitter
-consumer_key = '5mQcLHMi40bohlYDR5BaINf5E'
-consumer_secret = 'i3EuLk0R5YsWXsStm0VmXBXcFtRACw4j86QeJlS44XhPYQlsnS'
-access_token = '1441027346946011136-UFreliJiI39fxhNiVOBxDQViPpsp28'
-access_token_secret = '3dMsYyMTi46yd4l0uvhYN7imAx4scevI3q08vwSL1qMgq'
+consumer_key = ''
+consumer_secret = ''
+access_token = ''
+access_token_secret = ''
 auth = OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
 api = API(auth)

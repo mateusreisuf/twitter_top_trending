@@ -15,7 +15,7 @@ import pandas as pd
 
 
 # Conexão com Banco de dados MongoDB
-cluster = MongoClient('mongodb+srv://mat:1523a5b6M@cluster0.ihbkd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
+cluster = MongoClient('')
 db = cluster['twitter']
 collection = db['tweets']
 
