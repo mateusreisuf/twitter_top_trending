@@ -16,8 +16,8 @@ import pandas as pd
 
 # Conexão com Banco de dados MongoDB
 cluster = MongoClient('')
-db = cluster['twitter']
-collection = db['tweets']
+db = cluster['']
+collection = db['']
 
 
 result = collection.find({})

@@ -12,8 +12,6 @@
 
 <p>tweepy</p>
 
-<p>googletrans==4.0.0rc1</p>
-
 <p>pymongo</p>
 
 <p>pandas</p>
@@ -46,8 +44,6 @@
 
 <h5>python make_gif.py</h5>
 
-
-
 <p>Para fazer analise de sentimentos é preciso seguir os seguintes passos:<p>
 
 <p>executar o comando:<p>
@@ -60,13 +56,14 @@
 
 <h5>python tweets_mongo.py</h5>
 
-<p>e por fim executar o comnado abaixo para fazer analise de sentimento nos tweets:<p>
+<p>e por fim executar o comnado abaixo para fazer a filtragem nos tweets e  analise de sentimento:<p>
+
 
 <h5>python sentiment_analysis.py</h5>
 
-<p>O resultado da analise de sentimentos é um dicionário que contem os nomes dos top trending e uma classificação em relação ao sentimento que pode assumir 3 valores neutral , positive ou negative.<p>
+<p>O resultado da analise de sentimentos é um novo dataframe com os tweets originais, os tweets filtrados, a saida do classificador vader e a classificação do sentimento que pode ser positive, neutral ou negative. Por fim para facilitar a analise dos resultados foi criado um jupyter notebook para executar utilize o comando:<p>
 
-  
+<h5>jupyter notebook sentiment_pandas.ipynb</h5>
 
 
 

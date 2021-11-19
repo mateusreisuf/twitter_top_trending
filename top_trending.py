@@ -18,8 +18,8 @@ from pymongo import MongoClient
 
 # Conexão com Banco de dados MongoDB
 cluster = MongoClient('')
-db = cluster['twitter']
-collection = db['twitter3']
+db = cluster['']
+collection = db['']
 
 
 # Autenticações com API do Twitter
@@ -32,7 +32,9 @@ auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth)
 
 
-BRAZIL_WOE_ID = 23424768
+EUA_WOE_ID = 23424977
+
+
 id = 0
 
 
@@ -45,9 +47,9 @@ def trending(id):
     # separa a data da hora
     dt_string = dt_string.split(sep=' ')
 
-    brazil_trends = api.trends_place(BRAZIL_WOE_ID)
+    EUA_trends = api.trends_place(EUA_WOE_ID)
 
-    trends = json.loads(json.dumps(brazil_trends, indent=1))
+    trends = json.loads(json.dumps(EUA_trends, indent=1))
 
     trends2 = []
     for trend in trends[0]['trends']:

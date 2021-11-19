@@ -4,7 +4,7 @@
 
 
 '''
-Este script verifica quais são os top tranding e depois fica buscando tweets relacionados
+Este script verifica quais são os top trending e depois fica buscando tweets relacionados
 e salva no banco de dados mongoDB
 '''
 
@@ -20,8 +20,8 @@ from pymongo import  MongoClient
 
 # Conexão com Banco de dados MongoDB
 cluster = MongoClient('')
-db = cluster['twitter']
-collection = db['tweets']
+db = cluster['']
+collection = db['']
 
 
 class MyStreamListener(tweepy.StreamListener):
@@ -57,11 +57,11 @@ auth.set_access_token(access_token, access_token_secret)
 api = API(auth)
 
 
-BRAZIL_WOE_ID = 23424768
+EUA_WOE_ID = 23424977
 
-brazil_trends = api.trends_place(BRAZIL_WOE_ID)
+EUA_trends = api.trends_place(EUA_WOE_ID)
 
-trends = json.loads(json.dumps(brazil_trends, indent=1))
+trends = json.loads(json.dumps(EUA_trends, indent=1))
 
 trends2 = []
 
@@ -78,6 +78,10 @@ trends2 = [x[0] for x in trends2]
 
 # Seleciona os 10 com maior volume
 keywords_to_track = trends2[:10]
+
+
+
+
 print(keywords_to_track)
 print('--------------------')
 
@@ -93,6 +97,6 @@ stream = Stream(auth, listen)
 
 
 # Começa a coletar dados
-stream.filter(track = keywords_to_track)
+stream.filter(track = keywords_to_track,languages=['en'])
 
 

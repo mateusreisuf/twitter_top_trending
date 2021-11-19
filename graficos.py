@@ -15,6 +15,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
 from googletrans import Translator, constants
+from datetime import datetime
+from datetime import timedelta
 
 
 save_dir = 'graficos'
@@ -26,7 +28,7 @@ if not os.path.exists(save_dir):
 translator = Translator()
 
 
-data = pd.read_pickle("data.pkl")
+data = pd.read_pickle("volume_data.pkl")
 
 
 # Mostra no terminal os 5 primeiros registros no DataFrame
@@ -120,11 +122,33 @@ for i in range(len(unique_dates)):
                 plt.barh(px[l], py[l],color = colors[l])
                 #plt.barh(px[l], py[l])
 
-            ax.set_title('Twitter Top Trendings' + ' - ' + date + ' - ' + hour,
+
+            day, month, year = date.split(sep = '/')
+
+            date_iso = year + '-' + month + '-' + day
+
+
+            now_datetime = date_iso + ' ' + hour
+            now_datetime = datetime.fromisoformat(now_datetime)
+
+            prev_datetime = now_datetime - timedelta(seconds=0, minutes=1, hours=0)
+            prev_hour = prev_datetime.strftime("%H:%M:%S")
+
+            # se a data for a mesma de um minuto atrás
+            if (now_datetime.day == prev_datetime.day):
+
+                ax.set_title('Twitter Top Trendings' + ' - ' + date + ' - ' + prev_hour + ' - ' +hour,
                          loc='center', )
+
+            else:
+
+                prev_date = prev_datetime.strftime("%d/%m/%Y")
+                ax.set_title('Twitter Top Trendings' + ' - ' + prev_date + ' - ' + prev_hour + ' - ' + date + ' - ' + hour,
+                             loc='center', )
+
             ax.xaxis.set_tick_params(pad=5)
             ax.yaxis.set_tick_params(pad=10)
-            plt.xlabel('Volume')
+            plt.xlabel(' Variação do Volume')
             plt.savefig('graficos/' + str(img_num) + '.jpg',dpi = 100)
 
             img_num += 1
@@ -133,5 +157,6 @@ for i in range(len(unique_dates)):
 
 
         last = data_in_hour
+
 
 

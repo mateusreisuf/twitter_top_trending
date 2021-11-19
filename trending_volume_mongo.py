@@ -5,7 +5,7 @@
 
 '''
 # Este script tem a função de acessar o banco de dados MongoDB e salvar os
-dados em um arquivo com no data.pkl
+dados em um arquivo com nome data.pkl
 '''
 
 
@@ -15,8 +15,8 @@ import pandas as pd
 
 # Conexão com Banco de dados MongoDB
 cluster = MongoClient('')
-db = cluster['twitter']
-collection = db['twitter2']
+db = cluster['']
+collection = db['']
 
 
 # busca todos registros no banco de dados
@@ -37,4 +37,4 @@ print(data)
 
 
 # Salva o DataFrame em um aquivo
-data.to_pickle("data.pkl")
+data.to_pickle("volume_data.pkl")
